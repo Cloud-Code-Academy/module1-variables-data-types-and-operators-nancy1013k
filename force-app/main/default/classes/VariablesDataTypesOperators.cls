@@ -18,7 +18,7 @@
  * If statements are not specifically covered in the lesson this module, but review module 2 flow control section for an overview if needed.
  * Resources: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_if_else.htm 
  * 
- * @author Your Name
+ * @author Nancy Kolodziej
  */
 
 public with sharing class VariablesDataTypesOperators {
@@ -35,6 +35,15 @@ public with sharing class VariablesDataTypesOperators {
         return null; // Replace null with the variable you used to store the result
     }
 
+
+Integer @param = 5
+
+Integer myNumber = 8;
+Integer yourNumber = 12;
+Integer theTotal = myNumber + yourNumber; //the total will be 20
+
+
+
     /**
      * Question 2
      * Performs subtraction of two numbers.
@@ -47,6 +56,12 @@ public with sharing class VariablesDataTypesOperators {
         return null; // Replace null with the variable you used to store the result
     }
 
+
+Integer myNumber = 8;
+Integer yourNumber = 12; 
+Integer totalApples = myNumber - yourNumber; //the difference will be -4
+
+
     /**
      * Question 3
      * Performs multiplication of two numbers.
@@ -58,6 +73,10 @@ public with sharing class VariablesDataTypesOperators {
     public static Integer multiplication(Integer a, Integer b) {
         return null; // Replace null with the variable you used to store the result
     }
+
+Integer peopleInLine = 6;
+Integer numberOfLInes = 4;
+Integer totalPeople = peopleInLine * numberOfLInes; //the total will be 24
 
     /**
      * Question 4
@@ -72,6 +91,11 @@ public with sharing class VariablesDataTypesOperators {
         return null; // Replace null with the variable you used to store the result
     }
 
+
+Integer numberOfCandy = 24;
+Integer numberOfChildren = 6;
+Integer candyPerChild = numberOfCandy / numberOfChildren; //the result will be 4
+
     /**
      * Question 5
      * Checks if a number is even.
@@ -85,6 +109,12 @@ public with sharing class VariablesDataTypesOperators {
     public static Boolean isEven(Integer num) {
         return null; // Replace null with the variable you used to store the result
     }
+
+Integer myNumber = a
+if (a/2) {
+    = Integer; true 
+    
+}
 
     /**
      * Question 6
