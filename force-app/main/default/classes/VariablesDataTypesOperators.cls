@@ -31,16 +31,17 @@ public with sharing class VariablesDataTypesOperators {
      * @param b The second number.
      * @return The sum of the two numbers, or null if either number is null.
      */
-    public static Integer addition(Integer a, Integer b) {  
-        return null; // Replace null with the variable you used to store the result
+    public static Integer addition(Integer a, Integer b) { 
+        Integer myNumber = 8;
+        Integer yourNumber = 12;
+        Integer theTotal = myNumber + yourNumber; //the total will be 20
+        System.debug(theTotal);
     }
 
 
-Integer @param = 5
 
-Integer myNumber = 8;
-Integer yourNumber = 12;
-Integer theTotal = myNumber + yourNumber; //the total will be 20
+
+
 
 
 
@@ -60,6 +61,7 @@ Integer theTotal = myNumber + yourNumber; //the total will be 20
 Integer myNumber = 8;
 Integer yourNumber = 12; 
 Integer totalApples = myNumber - yourNumber; //the difference will be -4
+System.debug(totalApples);
 
 
     /**
@@ -71,12 +73,13 @@ Integer totalApples = myNumber - yourNumber; //the difference will be -4
      * @return The product of the two numbers.
      */
     public static Integer multiplication(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
+        Integer peopleInLine = 6;
+        Integer numberOfLInes = 4;
+        Integer totalPeople = peopleInLine * numberOfLInes; //the total will be 24
+        System.debug(totalPeople);
     }
 
-Integer peopleInLine = 6;
-Integer numberOfLInes = 4;
-Integer totalPeople = peopleInLine * numberOfLInes; //the total will be 24
+
 
     /**
      * Question 4
@@ -88,13 +91,13 @@ Integer totalPeople = peopleInLine * numberOfLInes; //the total will be 24
      * @return The quotient of the division, or 0 if the denominator is zero.
      */
     public static Decimal division(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
+        Integer numberOfCandy = 24;
+        Integer numberOfChildren = 6;
+        Integer candyPerChild = numberOfCandy / numberOfChildren; //the result will be 4
+        System.debug(candyPerChild);
     }
 
 
-Integer numberOfCandy = 24;
-Integer numberOfChildren = 6;
-Integer candyPerChild = numberOfCandy / numberOfChildren; //the result will be 4
 
     /**
      * Question 5
@@ -107,7 +110,17 @@ Integer candyPerChild = numberOfCandy / numberOfChildren; //the result will be 4
      * @return True if the number is even, False otherwise.
      */
     public static Boolean isEven(Integer num) {
-        return null; // Replace null with the variable you used to store the result
+
+
+        
+        if (num / 2 = Integer, true);
+        if (num / 2) = Decimal, false{
+            return true;
+        }
+        else
+            
+        }
+        return num; // Replace null with the variable you used to store the result
     }
 
 Integer myNumber = a
@@ -124,7 +137,15 @@ if (a/2) {
      * @return true if the number is positive, false otherwise.
      */
     public static Boolean isPositive(Integer num) {
-        return null; // Replace null with the variable you used to store the result
+      
+        if (num > 0) {
+            return true;
+        }
+        else
+            return false;
+            num = 10;
+            System.debug(return);
+        }
     }
 
     /**
@@ -136,8 +157,9 @@ if (a/2) {
      * @return The concatenated string.
      */
     public static String concatenateStrings(String str1, String str2) {
-        return null; // Replace null with the variable you used to store the result
-    }
+        String result = 'Warren' + ' ' + 'Walters';
+        System.debug(result);
+           }
 
 	/**
      * Question 8
@@ -151,7 +173,14 @@ if (a/2) {
 	 * @return The complete sentence as a single String.
 	 */
 	public static String createSentence(String noun, String verb, String endingPunctuation) {
-		return null; // Replace null with the variable you used to store the result
+        String noun = 'parrot';
+        String verb = 'singing';
+        String endingPunctuation = '.';
+        String result = 'The' + ' ' + noun + ' ' + 'is' + ' ' + verb + endingPunctuation;
+        System.debug(result);
+        }
+       
+
 	}
 
     /**
@@ -190,9 +219,10 @@ if (a/2) {
      * @return The number of milliseconds equivalent to the given number of minutes.
      */
     public static Integer convertMinutesToMilliseconds(Integer minutes) {
-        Integer MILLISECONDS_PER_MINUTE = null; // Make this value a constant
-        Integer milliseconds;
-        return null; // Replace null with the variable you used to store the result
+        Integer MILLISECONDS_PER_MINUTE = 60000; // Make this value a constant
+        Integer minutes = 2;
+        Integer result = minutes * MILLISECONDS_PER_MINUTE;
+        System.debug(result); 
     }    
 
     /**
@@ -206,7 +236,13 @@ if (a/2) {
      * @return The average of the three numbers.
      */
     public static Double averageOfThreeNumbers(Integer a, Integer b, Integer c) {
-        return null; // Replace null with the variable you used to store the result
+        Integer a = 6;
+        Integer b = 2;
+        Integer c = 4;
+        Integer sum = a + b + c;
+        Integer totalNumbers = 3;
+        Integer result = sum / totalNumbers;
+        System.debug(result); // Replace null with the variable you used to store the result
     }
 
     /**
