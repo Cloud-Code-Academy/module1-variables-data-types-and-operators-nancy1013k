@@ -112,20 +112,14 @@ System.debug(totalApples);
     public static Boolean isEven(Integer num) {
 
 
-        
-        if (num / 2 = Integer, true);
-        if (num / 2) = Decimal, false{
-            return true;
+        Integer myNum = 587;
+        if (Math.Mod(myNum, 2) == 0) {
+            system.debug(myNum + ' is even');
+        }else {
+            System.debug(myNum +  ' is not even');
         }
-        else
-            
-        }
-        return num; // Replace null with the variable you used to store the result
     }
 
-Integer myNumber = a
-if (a/2) {
-    = Integer; true 
     
 }
 
@@ -193,18 +187,16 @@ if (a/2) {
      * @return True if the date is in the past, False otherwise.
      */
     public static Boolean isDateInPast(Date dt) {
-        return null; // Replace null with the variable you used to store the result
-        Date dt = Date.newInstance(2025, 1, 1);
-        Date.today(2024, 8, 9);
-        System.debug(dt);
-        System.debug(today);
+        Date today = Date.today();
+        Date newDate = Date.newInstance(2024, 10, 22);
         
-        if (dt < today) {
-            return true;
+        if (today > newDate) {
+            System.debug('True, the new date is in the past');
+        } else {
+            System.debug('False, the new date is not in the past');
         }
-        System.debug(today);
         
-    }
+    
 
     /**
      * Question 10
@@ -222,7 +214,16 @@ if (a/2) {
      * @return True if the date is today or in the future, False otherwise.
      */
     public static Boolean isDateTodayOrFuture(Date dt) {
-        return null; // Replace null with the variable you used to store the result
+        Date today = Date.today();
+        Date newDate = Date.newInstance(2024, 10, 22);
+        
+        if (today == newDate) {
+            System.debug('True; the new date is today');
+        } else if (today < newDate) {
+            System.debug('True; the new date is in the future');
+        } else {
+            System.debug('False, the new date is in the past');
+        }
     }
 
     /**
@@ -361,6 +362,14 @@ if (a/2) {
         // Write the code for type casting the divisionResult to an Integer
         Integer roundedResult = null;
         return null; // Replace null with the variable you used to store the result
+
+        Double a = 7;
+        Double b = 4;
+        Double quotient = null;
+        Double divisionResult = null;
+        Double divisionResult = a / b;
+        roundedResult = divisionResult.intValue();
+        System.debug(roundedResult);
     }
 
     /**
