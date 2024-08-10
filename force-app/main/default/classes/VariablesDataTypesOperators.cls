@@ -19,6 +19,8 @@
  * Resources: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_if_else.htm 
  * 
  * @author Nancy Kolodziej
+ * I know that I have many errors in here, but I spent a lot of time on it and didn't want to get further behind by not finishing the rest of week 1 work. I apologize, but I'll come back to this after I know more about Apex. 
+ * 
  */
 
 public with sharing class VariablesDataTypesOperators {
@@ -32,10 +34,12 @@ public with sharing class VariablesDataTypesOperators {
      * @return The sum of the two numbers, or null if either number is null.
      */
     public static Integer addition(Integer a, Integer b) { 
-        Integer myNumber = 8;
-        Integer yourNumber = 12;
-        Integer theTotal = myNumber + yourNumber; //the total will be 20
-        System.debug(theTotal);
+        if (a != null && b != null){
+            integer total = a + b;
+            return total;
+        }
+   
+        return null;
     }
 
 
@@ -54,14 +58,14 @@ public with sharing class VariablesDataTypesOperators {
      * @return The difference between the two numbers.
      */
     public static Integer subtraction(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
-    }
+        if (a != null && b != null){
+            integer total = a - b;
+            return total;
+            return null;
+       
+      // Replace null with the variable you used to store the result
+    }}
 
-
-Integer myNumber = 8;
-Integer yourNumber = 12; 
-Integer totalApples = myNumber - yourNumber; //the difference will be -4
-System.debug(totalApples);
 
 
     /**
@@ -73,10 +77,9 @@ System.debug(totalApples);
      * @return The product of the two numbers.
      */
     public static Integer multiplication(Integer a, Integer b) {
-        Integer peopleInLine = 6;
-        Integer numberOfLInes = 4;
-        Integer totalPeople = peopleInLine * numberOfLInes; //the total will be 24
-        System.debug(totalPeople);
+        if (a != null && b != null){
+            integer total = a * b;
+            return total;
     }
 
 
@@ -94,7 +97,7 @@ System.debug(totalApples);
         Integer numberOfCandy = 24;
         Integer numberOfChildren = 6;
         Integer candyPerChild = numberOfCandy / numberOfChildren; //the result will be 4
-        System.debug(candyPerChild);
+        return candyPerChild;
     }
 
 
@@ -110,24 +113,12 @@ System.debug(totalApples);
      * @return True if the number is even, False otherwise.
      */
     public static Boolean isEven(Integer num) {
-
-
-        
-        if (num / 2 = Integer, true);
-        if (num / 2) = Decimal, false{
-            return true;
-        }
-        else
-            
-        }
-        return num; // Replace null with the variable you used to store the result
+        return null; // Replace null with the variable you used to store the result
     }
 
-Integer myNumber = a
-if (a/2) {
-    = Integer; true 
+
     
-}
+
 
     /**
      * Question 6
@@ -137,15 +128,8 @@ if (a/2) {
      * @return true if the number is positive, false otherwise.
      */
     public static Boolean isPositive(Integer num) {
-      Integer num = 24;
-        if (num > 0) {
-            return true;
-        }
-        else
-            return false;
-            num = 10;
-            System.debug(return);
-        }
+        return null;
+     
     }
 
     /**
@@ -158,7 +142,7 @@ if (a/2) {
      */
     public static String concatenateStrings(String str1, String str2) {
         String result = 'Warren' + ' ' + 'Walters';
-        System.debug(result);
+        return result;
            }
 
 	/**
@@ -173,15 +157,15 @@ if (a/2) {
 	 * @return The complete sentence as a single String.
 	 */
 	public static String createSentence(String noun, String verb, String endingPunctuation) {
-        String noun = 'parrot';
-        String verb = 'singing';
-        String endingPunctuation = '.';
+        noun = 'parrot';
+        verb = 'singing';
+        endingPunctuation = '.';
         String result = 'The' + ' ' + noun + ' ' + 'is' + ' ' + verb + endingPunctuation;
-        System.debug(result);
+        return result;
         }
        
 
-	}
+	
 
     /**
      * Question 9
@@ -193,16 +177,8 @@ if (a/2) {
      * @return True if the date is in the past, False otherwise.
      */
     public static Boolean isDateInPast(Date dt) {
-        return null; // Replace null with the variable you used to store the result
-        Date dt = Date.newInstance(2025, 1, 1);
-        Date.today(2024, 8, 9);
-        System.debug(dt);
-        System.debug(today);
+        return null;
         
-        if (dt < today) {
-            return true;
-        }
-        System.debug(today);
         
     }
 
@@ -236,9 +212,9 @@ if (a/2) {
      */
     public static Integer convertMinutesToMilliseconds(Integer minutes) {
         Integer MILLISECONDS_PER_MINUTE = 60000; // Make this value a constant
-        Integer minutes = 2;
+        minutes = 2;
         Integer result = minutes * MILLISECONDS_PER_MINUTE;
-        System.debug(result); 
+        return result; 
     }    
 
     /**
@@ -252,13 +228,13 @@ if (a/2) {
      * @return The average of the three numbers.
      */
     public static Double averageOfThreeNumbers(Integer a, Integer b, Integer c) {
-        Integer a = 6;
-        Integer b = 2;
-        Integer c = 4;
+        a = 6;
+        b = 2;
+        c = 4;
         Integer sum = a + b + c;
         Integer totalNumbers = 3;
         Integer result = sum / totalNumbers;
-        System.debug(result); // Replace null with the variable you used to store the result
+        return result; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -273,17 +249,17 @@ if (a/2) {
      */
     public static Integer adjustOrderOfOperations1(Integer a, Integer b, Integer c) {
         // Add parentheses around the addition operation so that it is performed before multiplication
-        Integer a = 5;
-        Integer b = 7;
-        Integer c = 3;
+        a = 5;
+        b = 7;
+        c = 3;
         Integer result = (a + b) * c;
-        System.debug(result); // Replace null with the variable you used to store the result
+        return result; // Replace null with the variable you used to store the result
     }
 
        
         // Return the result
-        return null; // Replace null with the variable you used to store the result
-    }
+   // Replace null with the variable you used to store the result
+    
 
     /**
      * Question 14
@@ -295,7 +271,7 @@ if (a/2) {
         // The result of the expression as it is right now is 43. 
         // You should add parentheses so that the result of the expression becomes 8.
         Integer answer = 48 - (15 + 5) * 2;
-        System.debug(answer);
+        return answer;
          // Replace null with the variable you used to store the result
     }
 
@@ -314,14 +290,14 @@ if (a/2) {
      * @return The result of the adjusted arithmetic expression.
      */
     public static Double complexOrderOfOperations(Integer a, Integer b, Integer c, Integer d, Integer e) {
-        Integer a = 1;
-        Integer b = 2;
-        Integer c = 3; 
-        Integer d = 4;
-        Integer e = 5;
+        a = 1;
+        b = 2;
+        c = 3; 
+        d = 4;
+        e = 5;
                 // Add parentheses around the division operation so that it is performed before addition
-        Double answer = [(a * b - c) / d] + e;
-        System.debug(answer); // Replace null with the variable you used to store the result
+        Double answer = (a * b - c) / d + e;
+        return answer; // Replace null with the variable you used to store the result
 
     }
 
@@ -337,9 +313,9 @@ if (a/2) {
         final Double MULTIPLY_FACTOR = 5.0;
         final Double DIVIDE_FACTOR = 9.0;
         Double celsius = null;
-        Double fahrenheit = 212;
+        fahrenheit = 212;
         celsius = (fahrenheit - SUBTRACT_FACTOR) * MULTIPLY_FACTOR / DIVIDE_FACTOR;
-        System.debug(celsius);
+        return celsius;
     
     }
 
@@ -374,12 +350,12 @@ if (a/2) {
      */
     public static Decimal calculateWeeklyPaycheck(Decimal hourlyRate, Double numberOfHours) {
         // Calculate the weekly paycheck using the formula: rate multiplied by hours
-        return null; // Replace null with the variable you used to store the result
-        Decimal hourly rate = 20.50;
-        Double numberOfHours = 40;
-        Decimal weeklyPaycheck = null;
-        weeklyPaycheck = hourlyRate * numberOfHours;
-        System.debug(weeklyPaycheck); //result is $820
+        //return null; // Replace null with the variable you used to store the result
+        hourlyRate = 20.50;
+        numberOfHours = 40;
+        //Decimal weeklyPaycheck = null;
+        Decimal weeklyPaycheck = hourlyRate * numberOfHours;
+        return weeklyPaycheck; //result is $820
     }
 
     /**
@@ -393,13 +369,13 @@ if (a/2) {
      * @return A Decimal representing the monthly paycheck.
      */
     public static Decimal calculateMonthlyPaycheck(Decimal hourlyRate, Double numberOfHours) {
-        return null; // Replace null with the variable you used to store the result
-        Decimal hourlyRate = 50.75;
-        Integer numberOfHours = 40;
+        //return null; // Replace null with the variable you used to store the result
+        hourlyRate = 50.75;
+        numberOfHours = 40;
         Decimal monthlyPaycheck = null;
         Integer weeksInMonth = 4;
         monthlyPaycheck = (hourlyRate * numberOfHours) * weeksInMonth;
-        System.debug(monthlyPaycheck);  
+        return monthlyPaycheck;  
      }
 
     /**
@@ -413,13 +389,12 @@ if (a/2) {
      * @return The total cost after applying the sales tax.
      */
     public static Decimal calculateTotalCost(Decimal pricePerUnit, Integer numberOfUnits, Decimal salesTaxRate) {
-        return null; // Replace null with the variable you used to store the result
-        Double pricePerUnit = 20;
-        Integer numberOfUnits = 5;
-        Double salesTaxRate = 0.05;
-        Decimal totalCost = null;
-        totalCost = ((pricePerUnit * numberOfUnits) * (1 + salesTaxRate));
-        System.debug(totalCost);
+        //return null; // Replace null with the variable you used to store the result
+       pricePerUnit = 20;
+        numberOfUnits = 5;
+        salesTaxRate = 0.05;
+        Decimal totalCost = ((pricePerUnit * numberOfUnits) * (1 + salesTaxRate));
+        return totalCost;
 
     }
 }
