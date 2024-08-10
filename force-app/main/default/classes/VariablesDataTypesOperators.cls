@@ -137,7 +137,7 @@ if (a/2) {
      * @return true if the number is positive, false otherwise.
      */
     public static Boolean isPositive(Integer num) {
-      
+      Integer num = 24;
         if (num > 0) {
             return true;
         }
@@ -194,6 +194,22 @@ if (a/2) {
      */
     public static Boolean isDateInPast(Date dt) {
         return null; // Replace null with the variable you used to store the result
+        Date dt = Date.newInstance(2025, 1, 1);
+        Date.today(2024, 8, 9);
+        System.debug(dt);
+        System.debug(today);
+        
+        if (dt < today) {
+            return true;
+        }
+        System.debug(today);
+        
+    }
+
+    /**
+     * Question 10
+     * Checks if a date is today.
+        System.debug(result);
     }
 
     /**
@@ -257,8 +273,14 @@ if (a/2) {
      */
     public static Integer adjustOrderOfOperations1(Integer a, Integer b, Integer c) {
         // Add parentheses around the addition operation so that it is performed before multiplication
-        Integer result = a + b * c;
+        Integer a = 5;
+        Integer b = 7;
+        Integer c = 3;
+        Integer result = (a + b) * c;
+        System.debug(result); // Replace null with the variable you used to store the result
+    }
 
+       
         // Return the result
         return null; // Replace null with the variable you used to store the result
     }
@@ -272,8 +294,9 @@ if (a/2) {
         // Add parentheses in the below expression to change the result.
         // The result of the expression as it is right now is 43. 
         // You should add parentheses so that the result of the expression becomes 8.
-        Integer answer = 48 - 15 + 5 * 2;
-        return null; // Replace null with the variable you used to store the result
+        Integer answer = 48 - (15 + 5) * 2;
+        System.debug(answer);
+         // Replace null with the variable you used to store the result
     }
 
     /**
@@ -291,10 +314,15 @@ if (a/2) {
      * @return The result of the adjusted arithmetic expression.
      */
     public static Double complexOrderOfOperations(Integer a, Integer b, Integer c, Integer d, Integer e) {
-        // Add parentheses around the multiplication and subtraction operations so that they are performed before division and addition
-        Double result = a * b - c / (Double) d + e;
+        Integer a = 1;
+        Integer b = 2;
+        Integer c = 3; 
+        Integer d = 4;
+        Integer e = 5;
+                // Add parentheses around the division operation so that it is performed before addition
+        Double answer = [(a * b - c) / d] + e;
+        System.debug(answer); // Replace null with the variable you used to store the result
 
-        return null; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -308,8 +336,11 @@ if (a/2) {
         final Double SUBTRACT_FACTOR = 32.0;
         final Double MULTIPLY_FACTOR = 5.0;
         final Double DIVIDE_FACTOR = 9.0;
+        Double celsius = null;
+        Double fahrenheit = 212;
+        celsius = (fahrenheit - SUBTRACT_FACTOR) * MULTIPLY_FACTOR / DIVIDE_FACTOR;
+        System.debug(celsius);
     
-        return null; // Replace null with the variable you used to store the result
     }
 
     
@@ -344,6 +375,11 @@ if (a/2) {
     public static Decimal calculateWeeklyPaycheck(Decimal hourlyRate, Double numberOfHours) {
         // Calculate the weekly paycheck using the formula: rate multiplied by hours
         return null; // Replace null with the variable you used to store the result
+        Decimal hourly rate = 20.50;
+        Double numberOfHours = 40;
+        Decimal weeklyPaycheck = null;
+        weeklyPaycheck = hourlyRate * numberOfHours;
+        System.debug(weeklyPaycheck); //result is $820
     }
 
     /**
@@ -358,7 +394,13 @@ if (a/2) {
      */
     public static Decimal calculateMonthlyPaycheck(Decimal hourlyRate, Double numberOfHours) {
         return null; // Replace null with the variable you used to store the result
-    }
+        Decimal hourlyRate = 50.75;
+        Integer numberOfHours = 40;
+        Decimal monthlyPaycheck = null;
+        Integer weeksInMonth = 4;
+        monthlyPaycheck = (hourlyRate * numberOfHours) * weeksInMonth;
+        System.debug(monthlyPaycheck);  
+     }
 
     /**
      * Question 20
@@ -372,5 +414,12 @@ if (a/2) {
      */
     public static Decimal calculateTotalCost(Decimal pricePerUnit, Integer numberOfUnits, Decimal salesTaxRate) {
         return null; // Replace null with the variable you used to store the result
+        Double pricePerUnit = 20;
+        Integer numberOfUnits = 5;
+        Double salesTaxRate = 0.05;
+        Decimal totalCost = null;
+        totalCost = ((pricePerUnit * numberOfUnits) * (1 + salesTaxRate));
+        System.debug(totalCost);
+
     }
 }
