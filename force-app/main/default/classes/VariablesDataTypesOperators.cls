@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //**
 /* This is the VariablesDataTypesOperators class, part of the Developer Kickstart Module 1 curriculum 
 * at Cloud Code Academy. This class serves as an introduction to the basic elements of Apex programming 
@@ -380,5 +379,3 @@ public with sharing class VariablesDataTypesOperators {
         return result; // Replace null with the variable you used to store the result
     }
  }
-=======
->>>>>>> e2504b6fcd4a0ff436d079fd8002e3fef64f59a3
