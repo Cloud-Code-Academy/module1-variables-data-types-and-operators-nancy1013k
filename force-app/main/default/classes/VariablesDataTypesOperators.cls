@@ -379,3 +379,5 @@ public with sharing class VariablesDataTypesOperators {
         return result; // Replace null with the variable you used to store the result
     }
  }
+=======
+>>>>>>> e2504b6fcd4a0ff436d079fd8002e3fef64f59a3
