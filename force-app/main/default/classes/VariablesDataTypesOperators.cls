@@ -1,25 +1,25 @@
-/**
- * This is the VariablesDataTypesOperators class, part of the Developer Kickstart Module 1 curriculum 
- * at Cloud Code Academy. This class serves as an introduction to the basic elements of Apex programming 
- * including variables, data types, and operators.
- * 
- * This class is an essential tool for beginner developers who are just starting their journey in Salesforce 
- * development. It covers all the foundational elements necessary to understand and write Apex code effectively.
- * 
- * Topics covered in this class include:
- * - Understanding different data types in Apex such as Integer, Decimal, Double, String, Boolean, etc.
- * - Understanding how to declare and use variables in Apex.
- * - Understanding how to use various types of operators in Apex including arithmetic operators, 
- *   comparison operators, logical operators, and more.
- *
- * Users of this class can expect to gain a strong foundation in Apex programming and be prepared for 
- * more advanced topics in Salesforce development.
- * 
- * If statements are not specifically covered in the lesson this module, but review module 2 flow control section for an overview if needed.
- * Resources: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_if_else.htm 
- * 
- * @author Your Name
- */
+//**
+/* This is the VariablesDataTypesOperators class, part of the Developer Kickstart Module 1 curriculum 
+* at Cloud Code Academy. This class serves as an introduction to the basic elements of Apex programming 
+* including variables, data types, and operators.
+* 
+* This class is an essential tool for beginner developers who are just starting their journey in Salesforce 
+* development. It covers all the foundational elements necessary to understand and write Apex code effectively.
+* 
+* Topics covered in this class include:
+* - Understanding different data types in Apex such as Integer, Decimal, Double, String, Boolean, etc.
+* - Understanding how to declare and use variables in Apex.
+* - Understanding how to use various types of operators in Apex including arithmetic operators, 
+*   comparison operators, logical operators, and more.
+*
+* Users of this class can expect to gain a strong foundation in Apex programming and be prepared for 
+* more advanced topics in Salesforce development.
+* 
+* If statements are not specifically covered in the lesson this module, but review module 2 flow control section for an overview if needed.
+* Resources: https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/langCon_apex_if_else.htm 
+* 
+* @author Nancy Kolodziej
+*/
 
 public with sharing class VariablesDataTypesOperators {
     /**
@@ -32,9 +32,15 @@ public with sharing class VariablesDataTypesOperators {
      * @return The sum of the two numbers, or null if either number is null.
      */
     public static Integer addition(Integer a, Integer b) {  
-        return null; // Replace null with the variable you used to store the result
-    }
-
+     if (a != null && b != null)
+     {
+         integer total = a + b;
+         return total;
+     }
+         return null;
+ }// Replace null with the variable you used to store the result
+    
+ 
     /**
      * Question 2
      * Performs subtraction of two numbers.
@@ -44,9 +50,11 @@ public with sharing class VariablesDataTypesOperators {
      * @return The difference between the two numbers.
      */
     public static Integer subtraction(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
+     Integer total = a - b;
+     return total;
+ // Replace null with the variable you used to store the result
     }
-
+ 
     /**
      * Question 3
      * Performs multiplication of two numbers.
@@ -56,9 +64,11 @@ public with sharing class VariablesDataTypesOperators {
      * @return The product of the two numbers.
      */
     public static Integer multiplication(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
+     integer total = a * b;
+     return total;
+ // Replace null with the variable you used to store the result
     }
-
+ 
     /**
      * Question 4
      * Performs division of two numbers.
@@ -69,9 +79,17 @@ public with sharing class VariablesDataTypesOperators {
      * @return The quotient of the division, or 0 if the denominator is zero.
      */
     public static Decimal division(Integer a, Integer b) {
-        return null; // Replace null with the variable you used to store the result
+     if (b == 0)
+     {
+         return 0;
+     }
+     Decimal total = a / b;
+     return total;
+     
+ // Replace null with the variable you used to store the result
     }
-
+ 
+ 
     /**
      * Question 5
      * Checks if a number is even.
@@ -83,9 +101,19 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the number is even, False otherwise.
      */
     public static Boolean isEven(Integer num) {
-        return null; // Replace null with the variable you used to store the result
-    }
-
+     Integer result = math.mod(num, 2);
+     if (result == 0) 
+     {
+         return true;   
+     }
+     else
+     {
+        return false;  
+     }
+     }
+ // Replace null with the variable you used to store the result
+ 
+ 
     /**
      * Question 6
      * Checks if a number is positive.
@@ -94,9 +122,20 @@ public with sharing class VariablesDataTypesOperators {
      * @return true if the number is positive, false otherwise.
      */
     public static Boolean isPositive(Integer num) {
-        return null; // Replace null with the variable you used to store the result
-    }
-
+         if (num == null || num <= 0)
+         {
+             return false;
+         }
+         else 
+         {
+             return true;
+         }
+     }
+ 
+  
+ // Replace null with the variable you used to store the result
+    
+ 
     /**
      * Question 7
      * Concatenates two strings.
@@ -105,25 +144,30 @@ public with sharing class VariablesDataTypesOperators {
      * @param str2 The second string.
      * @return The concatenated string.
      */
-    public static String concatenateStrings(String str1, String str2) {
-        return null; // Replace null with the variable you used to store the result
+     public static String concatenateStrings(String str1, String str2) {
+         
+         String result = str1 + str2;
+         return result;
+    
+ // Replace null with the variable you used to store the result
     }
-
-	/**
+ 
+    /**
      * Question 8
-	 * Constructs a sentence by concatenating a given noun, verb, and ending punctuation.
-	 * The sentence is structured to begin with 'The', followed by the noun, then 'is', the verb, and finally the ending punctuation.
-	 * Example: createSentence('cat', 'jumping', '!') should return 'The cat is jumping!'
-	 * Example: createSentence('bird', 'flying', '.') should return 'The bird is flying.'
-	 * @param noun The noun or subject of the sentence.
-	 * @param verb The verb or action of the sentence.
-	 * @param endingPunctuation The punctuation to end the sentence, e.g., '.', '!', '?'
-	 * @return The complete sentence as a single String.
-	 */
-	public static String createSentence(String noun, String verb, String endingPunctuation) {
-		return null; // Replace null with the variable you used to store the result
-	}
-
+     * Constructs a sentence by concatenating a given noun, verb, and ending punctuation.
+     * The sentence is structured to begin with 'The', followed by the noun, then 'is', the verb, and finally the ending punctuation.
+     * Example: createSentence('cat', 'jumping', '!') should return 'The cat is jumping!'
+     * Example: createSentence('bird', 'flying', '.') should return 'The bird is flying.'
+     * @param noun The noun or subject of the sentence.
+     * @param verb The verb or action of the sentence.
+     * @param endingPunctuation The punctuation to end the sentence, e.g., '.', '!', '?'
+     * @return The complete sentence as a single String.
+     */
+    public static String createSentence(String noun, String verb, String endingPunctuation){
+         String result = 'The ' + noun + ' is ' + verb + endingPunctuation;
+         return result; // Replace null with the variable you used to store the result
+    }
+ 
     /**
      * Question 9
      * Checks if a date is in the past.
@@ -133,10 +177,20 @@ public with sharing class VariablesDataTypesOperators {
      * @param dt The date to check.
      * @return True if the date is in the past, False otherwise.
      */
-    public static Boolean isDateInPast(Date dt) {
-        return null; // Replace null with the variable you used to store the result
-    }
-
+     public static Boolean isDateInPast(Date dt) {
+         //dt = Date.newInstance(2016, 6, 24);
+         Date today = Date.today();
+         if (dt < today)
+         {
+             return true;
+         }
+         else 
+         {
+             return false;
+         }
+         }
+         // Replace null with the variable you used to store the result
+    
     /**
      * Question 10
      * Checks if a date is today or in the future.
@@ -147,9 +201,17 @@ public with sharing class VariablesDataTypesOperators {
      * @return True if the date is today or in the future, False otherwise.
      */
     public static Boolean isDateTodayOrFuture(Date dt) {
-        return null; // Replace null with the variable you used to store the result
+     Date today = Date.today();
+     if (dt == today || dt > today)
+     {
+        return true; // Replace null with the variable you used to store the result
+     }
+     else
+     {
+         return false;
+     }
     }
-
+ 
     /**
      * Question 11
      * Converts the number of minutes to milliseconds.
@@ -160,11 +222,14 @@ public with sharing class VariablesDataTypesOperators {
      * @return The number of milliseconds equivalent to the given number of minutes.
      */
     public static Integer convertMinutesToMilliseconds(Integer minutes) {
-        Integer MILLISECONDS_PER_MINUTE = null; // Make this value a constant
-        Integer milliseconds;
-        return null; // Replace null with the variable you used to store the result
+     
+         Integer MILLISECONDS_PER_MINUTE = 60000; // Make this value a constant
+         Integer milliseconds;
+         Integer m = minutes; 
+         milliseconds = (m * MILLISECONDS_PER_MINUTE);
+         return milliseconds; // Replace null with the variable you used to store the result
     }    
-
+ 
     /**
      * Question 12
      * Calculates the average of three numbers.
@@ -176,9 +241,11 @@ public with sharing class VariablesDataTypesOperators {
      * @return The average of the three numbers.
      */
     public static Double averageOfThreeNumbers(Integer a, Integer b, Integer c) {
-        return null; // Replace null with the variable you used to store the result
+       Double averageOfThreeNumbers = (a +  b + c)/3;
+       return averageOfThreeNumbers;
+         // Replace null with the variable you used to store the result
     }
-
+ 
     /**
      * Question 13
      * Adjusts the order of operations in an arithmetic expression to produce a desired result.
@@ -191,12 +258,12 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Integer adjustOrderOfOperations1(Integer a, Integer b, Integer c) {
         // Add parentheses around the addition operation so that it is performed before multiplication
-        Integer result = a + b * c;
-
+        Integer result = (a + b) * c;
+ 
         // Return the result
-        return null; // Replace null with the variable you used to store the result
+        return result; // Replace null with the variable you used to store the result
     }
-
+ 
     /**
      * Question 14
      * Modifies the expression to adhere to PEMDAS rules in order to change its result.
@@ -206,10 +273,10 @@ public with sharing class VariablesDataTypesOperators {
         // Add parentheses in the below expression to change the result.
         // The result of the expression as it is right now is 43. 
         // You should add parentheses so that the result of the expression becomes 8.
-        Integer answer = 48 - 15 + 5 * 2;
-        return null; // Replace null with the variable you used to store the result
+        Integer answer = 48 - ((15 + 5) * 2);
+        return answer; // Replace null with the variable you used to store the result
     }
-
+ 
     /**
      * Question 15
      * Adjusts the order of operations in an arithmetic expression to produce a desired result.
@@ -226,11 +293,11 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Double complexOrderOfOperations(Integer a, Integer b, Integer c, Integer d, Integer e) {
         // Add parentheses around the multiplication and subtraction operations so that they are performed before division and addition
-        Double result = a * b - c / (Double) d + e;
-
-        return null; // Replace null with the variable you used to store the result
+        Double result = (a * b - c) / (Double) d + e;
+ 
+        return result; // Replace null with the variable you used to store the result
     }
-
+ 
     /**
      * Question 16
      * Converts the temperature from Fahrenheit to Celsius.
@@ -242,12 +309,12 @@ public with sharing class VariablesDataTypesOperators {
         final Double SUBTRACT_FACTOR = 32.0;
         final Double MULTIPLY_FACTOR = 5.0;
         final Double DIVIDE_FACTOR = 9.0;
-    
-        return null; // Replace null with the variable you used to store the result
+        Double celsius = (fahrenheit - SUBTRACT_FACTOR) * MULTIPLY_FACTOR/DIVIDE_FACTOR;
+        return celsius; // Replace null with the variable you used to store the result
     }
-
+ 
     
-
+ 
     /**
      * Question 17
      * Performs division and returns the result as a casted Integer.
@@ -260,12 +327,13 @@ public with sharing class VariablesDataTypesOperators {
     public static Integer performDivisionAndCast(Double a, Double b) {
         // Perform the division and cast (round down) off the result.
         Double divisionResult = null;
-
+ 
         // Write the code for type casting the divisionResult to an Integer
         Integer roundedResult = null;
-        return null; // Replace null with the variable you used to store the result
+        Integer result = (Integer)Math.floor(a/b);
+        return result; // Replace null with the variable you used to store the result
     }
-
+ 
     /**
      * Question 18
      * Calculate the weekly and monthly paycheck based on hourly rate and number of hours.
@@ -277,9 +345,10 @@ public with sharing class VariablesDataTypesOperators {
      */
     public static Decimal calculateWeeklyPaycheck(Decimal hourlyRate, Double numberOfHours) {
         // Calculate the weekly paycheck using the formula: rate multiplied by hours
-        return null; // Replace null with the variable you used to store the result
+        Decimal result = hourlyRate * numberOfHours;
+        return result; // Replace null with the variable you used to store the result
     }
-
+ 
     /**
      * Question 19
      * Calculate the weekly and monthly paycheck based on hourly rate and number of hours.
@@ -291,9 +360,10 @@ public with sharing class VariablesDataTypesOperators {
      * @return A Decimal representing the monthly paycheck.
      */
     public static Decimal calculateMonthlyPaycheck(Decimal hourlyRate, Double numberOfHours) {
-        return null; // Replace null with the variable you used to store the result
+     Decimal result = hourlyRate * numberOfHours * 4;
+        return result; // Replace null with the variable you used to store the result
     }
-
+ 
     /**
      * Question 20
      * Calculates the total cost based on price per unit, number of units, and a sales tax rate.
@@ -305,6 +375,7 @@ public with sharing class VariablesDataTypesOperators {
      * @return The total cost after applying the sales tax.
      */
     public static Decimal calculateTotalCost(Decimal pricePerUnit, Integer numberOfUnits, Decimal salesTaxRate) {
-        return null; // Replace null with the variable you used to store the result
+     Decimal result = (pricePerUnit * numberOfUnits) * (1 + salesTaxRate);
+        return result; // Replace null with the variable you used to store the result
     }
-}
+ }
