@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //**
 /* This is the VariablesDataTypesOperators class, part of the Developer Kickstart Module 1 curriculum 
 * at Cloud Code Academy. This class serves as an introduction to the basic elements of Apex programming 
